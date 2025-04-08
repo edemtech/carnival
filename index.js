@@ -43,6 +43,19 @@ const mainMenu = Markup.keyboard([
   bot.hears('🍏 Питание', (ctx) => {
     ctx.reply('Вот советы по питанию на сегодня: \n1. Больше белка\n2. Меньше сахара\n3. Достаточно воды');
   });
+
+
+  bot.on('new_chat_members', async (ctx) => {
+    const newMembers = ctx.message.new_chat_members;
+
+    for (const members of newMembers) {
+      const userId = member.id.toString();
+      const username = member.username || 'Анон';
+      const firstName = member.first_name;
+
+      console.log('велком юзер ', userId, username, firstName)
+    }
+  })
   
   // Запуск бота
   bot.launch();

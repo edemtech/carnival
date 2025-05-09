@@ -19,7 +19,10 @@ db.serialize(() => {
       username TEXT,
       first_name TEXT,
       last_name TEXT,
-      progress INTEGER DEFAULT 0
+      progress INTEGER DEFAULT 0,
+      level INTEGER DEFAULT 1,
+      aim INGEGER DEFAULT 0,
+      health INTEGER DEFAULT 0
     )
   `);
 });

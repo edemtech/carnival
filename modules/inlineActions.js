@@ -2,7 +2,7 @@ const db = require('../db');
 
 function setupInlineActions(bot) {
   bot.action('workouts', (ctx) => ctx.reply('Тренировка на сегодня: приседания, жим лёжа, подтягивания.'));
-  bot.action('nutrition', (ctx) => ctx.reply('Совет по питанию: ешь больше белка и меньше сахара.'));
+  bot.action('nutrition', (ctx) => ctx.reply('Съедай 4 яйцаю, 250 грамм куриной грудки и пачку творога'));
   bot.action('progress', (ctx) => {
     const userId = ctx.from.id;
 
